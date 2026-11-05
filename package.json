@@ -1,0 +1,11 @@
+{
+  "name": "rebirth-drama-male",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A browser-local interactive male-protagonist rebirth drama with seven endings.",
+  "scripts": {
+    "check": "node scripts/check.cjs",
+    "build": "node scripts/build-static.mjs"
+  },
+  "engines": { "node": ">=22" }
+}

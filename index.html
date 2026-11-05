@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#1c1b20">
+  <meta name="description" content="重生回替假少爷顶罪前七天。你要护住妹妹，查清身世，决定与谁联手、把谁留在局里。10集连锁剧情，7种男主结局。原创娱乐测评。">
+  <title>重生回替罪前，你能翻盘吗？｜男主篇</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="story.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到剧情</a>
+  <header class="topbar container">
+    <a class="wordmark" href="./index.html" aria-label="重生片场首页">重生片场<span>男主篇</span></a>
+    <button id="home-button" class="text-button" type="button" hidden>暂存并返回</button>
+    <span id="edition" class="edition">这一次，剧本归你。</span>
+  </header>
+  <main id="main" class="container" tabindex="-1">
+    <section id="home" class="cover" aria-labelledby="cover-title">
+      <div class="cover-copy">
+        <h1 id="cover-title">重生回替罪前，<br>你能翻盘吗？</h1>
+        <p class="cover-lead">七天，护住妹妹，查清谁要你再死一次。</p>
+        <div class="cover-actions">
+          <button id="start-button" type="button" class="button primary">重生，开机</button>
+          <button id="resume-button" type="button" class="button quiet" hidden>继续剧情</button>
+        </div>
+        <p class="cover-note">10 集连锁剧情，7 种终局。选择会改写下一幕。</p>
+      </div>
+      <div class="opening" aria-label="第一集剧情预告">
+        <div class="opening-top"><span>第 01 集</span><span>沈家认亲宴</span></div>
+        <p class="opening-quote">“亲兄弟，<br>替他签个字怎么了？”</p>
+        <p class="opening-scene">前世，你签了，替假少爷坐了三年牢。<br>现在，那杯酒又递到了你面前。</p>
+        <div class="opening-bottom"><span>你的身份</span><strong>重生回顶罪前的真少爷</strong></div>
+      </div>
+    </section>
+    <section id="play" class="play" hidden aria-labelledby="episode-title">
+      <div class="episode-toolbar">
+        <p id="episode-count"></p>
+        <span id="chapter"></span>
+      </div>
+      <progress id="progress" value="0" max="10" aria-label="剧情完成进度"></progress>
+      <div class="play-grid">
+        <div class="scene">
+          <div class="scene-location"><span id="scene-number"></span><span id="place"></span></div>
+          <h1 id="episode-title" tabindex="-1"></h1>
+          <p id="scene-text" class="scene-text"></p>
+          <p id="branch-text" class="branch-text" hidden></p>
+          <blockquote id="scene-quote"></blockquote>
+          <div class="pocket">
+            <h2>这一世，留下了什么</h2>
+            <dl id="live-stats" class="stats"></dl>
+            <p id="inventory">关键证物与接应，会随你做过的选择留下。</p>
+          </div>
+        </div>
+        <div class="decision">
+          <form id="choice-form">
+            <fieldset><legend>这一幕，你怎么演？</legend><div id="options"></div></fieldset>
+            <div class="decision-actions">
+              <button id="confirm-button" class="button primary" type="submit" disabled>选好，就这样演</button>
+              <button id="previous-button" class="text-button" type="button">回到上一集</button>
+            </div>
+          </form>
+          <div id="reaction" class="reaction" hidden>
+            <h2>这一手之后</h2>
+            <p id="chosen-line" class="chosen-line"></p>
+            <p id="reaction-text" class="reaction-text"></p>
+            <div id="deltas" class="deltas" aria-label="本次筹码变化"></div>
+            <div class="decision-actions">
+              <button id="next-button" type="button" class="button primary">继续下一集</button>
+              <button id="rechoose-button" type="button" class="text-button">这集重新选</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="save-note" id="save-note">进度只保存在当前浏览器。</p>
+    </section>
+    <section id="result" class="result" hidden aria-labelledby="result-title">
+      <div class="result-top"><p>你的大结局</p><span id="result-role"></span></div>
+      <div class="result-heading"><h1 id="result-title" tabindex="-1"></h1><p id="verdict"></p></div>
+      <p id="result-summary" class="result-summary"></p>
+      <div class="result-actions">
+        <button id="download-button" type="button" class="button primary">保存结局长图</button>
+        <button id="replay-button" type="button" class="button quiet">重生，再来一局</button>
+        <button id="edit-button" type="button" class="text-button">回看 / 改选剧情</button>
+      </div>
+      <div id="download-status" class="download-status" role="status"></div>
+      <div id="poster-preview" class="poster-preview" hidden><p>长按下图可保存到相册，也可点击下载。</p><div id="poster-image-host"></div><a id="poster-link" class="button quiet" download="我的重生结局.png">下载 PNG 原图</a></div>
+      <div class="result-grid">
+        <div class="result-story"><h2>这个结局的代价</h2><p id="result-cost"></p><h2>这一世，你留下的人</h2><p id="result-people"></p><h2>这一世的后来</h2><p id="result-after"></p><blockquote id="result-line"></blockquote></div>
+        <div class="result-stats"><h2>你的终局筹码</h2><dl id="final-stats" class="stats"></dl><p>这是本局累计的剧情点数。结局还取决于证物、人物去留与最后行动；暴露越高不等于必输。这不是现实成功率或人格评价。</p></div>
+      </div>
+      <div class="choices-review"><h2>这几幕，把你写成了现在的你</h2><ol id="highlights"></ol></div>
+      <details class="rules"><summary>我的选择，怎样改变了后面？</summary><p>你是否提前送走小满，是否救下阿舟，是否信任顾明棠，都会改变后续的困局、选项与回应。旧账、遗嘱、口供、表决筹码和接应也分别记录；有足够点数，并不等于你持有某件证物。</p><p>终局按你最后实际做的事判定：公开真相需要遗嘱与独立证据相互印证；夺权需要确权或旧厂阵地以及能施压的筹码，出卖同伴会改变结局的代价；带人离场需要提前安排退路或接应；接笔签字只有在提前合演并留足独立底牌时才可能反转。缺少准备，也会得到未完成复仇或再度落入陷阱的结局。同组答案稳定得到同一结果，全部为虚构娱乐剧情。</p></details>
+    </section>
+    <noscript><p class="noscript">这是一个需要 JavaScript 的互动故事。请启用浏览器的 JavaScript 后刷新，即可从订婚宴开始重生。</p></noscript>
+  </main>
+  <footer class="footer container"><p>原创虚构剧情，仅供娱乐。</p><p>答案留在你的浏览器，结局可以带走。</p></footer>
+  <dialog id="restart-dialog"><h2>要从第一集重新开机吗？</h2><p>当前浏览器里的这一局进度会被替换。</p><div><button id="cancel-restart" type="button" class="button quiet">保留这一局</button><button id="confirm-restart" type="button" class="button primary">重新开机</button></div></dialog>
+</body>
+</html>
